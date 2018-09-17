@@ -33,6 +33,9 @@ class Acceptor:
     _highest_proposal_to_date = -1
     last_promises = {}
 
+    def __init__(self):
+        self.last_promise = None
+
     def set_last_promise(self, last_promise):
         self.last_promise = last_promise
         Acceptor._highest_proposal_to_date = last_promise.prepare.proposal.id
